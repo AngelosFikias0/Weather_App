@@ -38,20 +38,20 @@ This Weather App leverages HTML, CSS, and JavaScript to deliver real-time weathe
    cd weather-app
 
 2. **Obtain API Key:**
-Obtain API Key:
-Sign up at OpenWeatherMap and generate your API key.
+- Obtain API Key:
+- Sign up at OpenWeatherMap and generate your API key.
 
 3. **Update API Key in the Code:**
-Open Weather_App.js and replace the placeholder API key with your own:
-const apiKey = 'YOUR_API_KEY_HERE';
+- Open Weather_App.js and replace the placeholder API key with your own:
+- const apiKey = 'YOUR_API_KEY_HERE';
 
 4. **Open the Application:**
 - Open index.html in your preferred web browser to launch the app.
 
 5. **Search for Weather:**
--Enter the name of a city into the input field and click the "Search" button.
+- Enter the name of a city into the input field and click the "Search" button.
 
 6. **View Results:**
--The app will display the city’s name, current temperature, and weather description.
--An icon representing the current weather will be shown.
--The background color will adjust according to the temperature.
+- The app will display the city’s name, current temperature, and weather description.
+- An icon representing the current weather will be shown.
+- The background color will adjust according to the temperature.
