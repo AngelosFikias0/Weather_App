@@ -1,57 +1,93 @@
-# Weather App
+# 🌤️ Real-Time Weather Dashboard
 
-## Description
+> **A dynamic, mobile-first weather application consuming the OpenWeatherMap API to provide instant meteorological data and adaptive UI feedback.**
 
-This Weather App leverages HTML, CSS, and JavaScript to deliver real-time weather updates globally through the OpenWeatherMap API. It provides current temperature, weather conditions, and an appropriate weather icon. The app features a dynamic background color that changes according to the temperature, enhancing visual context. With its user-friendly search interface, users can easily access weather information for any city, making it both functional and intuitive.
+This application serves as a practical implementation of **Async/Await JavaScript** and **REST API orchestration**. It translates raw JSON data into a visual experience, featuring a temperature-aware UI that changes its aesthetic based on real-time climate conditions.
 
-## Features
+---
 
-- **City Search:** Enter the name of a city to get current weather information.
-- **Real-Time Data:** Shows temperature, weather description, and icon.
-- **Dynamic Background:** Background color changes based on temperature:
-  - **Red** for very hot temperatures
-  - **Orange** for hot temperatures
-  - **Yellow** for warm temperatures
-  - **Light Green** for mild temperatures
-  - **Blue** for cool temperatures
-  - **Light Blue** for cold temperatures
-- **Responsive Design:** User-friendly interface suitable for various devices.
+## 📌 System Workflow
 
-## Technologies Used
+The app functions by capturing user input, querying a remote server, and dynamically updating the Document Object Model (DOM).
 
-- **API:** [OpenWeatherMap API](https://openweathermap.org/api)
-- **Languages:** HTML, CSS, JavaScript
-- **Styling:** Custom CSS
 
-## Setup Instructions
+
+```text
+       [ User Input ]
+       (City Name Search)
+              |
+      (Async Fetch Request)
+              v
+     [ OpenWeatherMap API ]
+    (Real-time Data Fetch)
+              |
+              v
+     [ JSON Data Parsing ]
+    (Temp, Icon, Conditions)
+              |
+              v
+     [ Dynamic UI Update ]
+    (DOM Rendering & BG Color)
+```
+
+---
+
+## 🚀 Key Features
+
+* **Global Search:** Query weather data for any city worldwide using the OpenWeatherMap geolocation engine.
+* **Real-Time Data Streams:** Instant display of temperature (Celsius/Fahrenheit), weather descriptions, and status icons.
+* **Contextual UI (Dynamic Background):** The interface visually reflects the climate. The background color shifts automatically based on temperature thresholds:
+    * 🔴 **Hot (>30°C):** Vibrant Red/Orange.
+    * 🟡 **Warm (20°C - 30°C):** Sunlit Yellow.
+    * 🟢 **Mild (10°C - 20°C):** Refreshing Green.
+    * 🔵 **Cold (<10°C):** Cool Blue/Cyan.
+* **Responsive Layout:** Fully optimized for desktops, tablets, and smartphones using CSS Flexbox/Grid.
+
+---
+
+## 🧰 Technical Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Frontend** | HTML5, CSS3 (Custom Properties) |
+| **Logic** | JavaScript (ES6+), Fetch API |
+| **External Service** | OpenWeatherMap REST API |
+| **Version Control** | Git |
+
+---
+
+## 🛠️ Installation & Setup
 
 ### Prerequisites
+* A modern web browser.
+* An API Key from [OpenWeatherMap](https://openweathermap.org/api).
 
-- A modern web browser (e.g., Chrome, Firefox)
-- An API key from OpenWeatherMap
+### Step-by-Step Setup
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/AngelosFikias0/Weather_App.git](https://github.com/AngelosFikias0/Weather_App.git)
+    cd Weather_App
+    ```
+2.  **Configure your API Key:**
+    Open `Weather_App.js` and update the `apiKey` constant:
+    ```javascript
+    const apiKey = "YOUR_API_KEY_HERE";
+    ```
+3.  **Launch:**
+    Simply open `index.html` in your browser.
 
-### Installation
+---
 
-1. **Clone the Repository:**
-   ```bash
-   git clone <repository-url>
-   cd weather-app
+## 📊 Engineering Highlights
 
-2. **Obtain API Key:**
-- Obtain API Key:
-- Sign up at OpenWeatherMap and generate your API key.
+* **Error Handling:** Implemented `try-catch` blocks and HTTP response validation (e.g., handling 404 "City Not Found") to ensure a smooth user experience.
+* **Async/Await Patterns:** Utilized modern asynchronous patterns to prevent UI blocking during data retrieval.
+* **State-Driven Design:** The UI state (background and icons) is directly driven by the numerical data returned from the API.
 
-3. **Update API Key in the Code:**
-- Open Weather_App.js and replace the placeholder API key with your own:
-- const apiKey = 'YOUR_API_KEY_HERE';
+---
 
-4. **Open the Application:**
-- Open index.html in your preferred web browser to launch the app.
+## 📄 License
+This project is open-source and available under the **MIT License**.
 
-5. **Search for Weather:**
-- Enter the name of a city into the input field and click the "Search" button.
-
-6. **View Results:**
-- The app will display the city’s name, current temperature, and weather description.
-- An icon representing the current weather will be shown.
-- The background color will adjust according to the temperature.
+---
+**Developed by Angelos Fikias** *Bridging data and design through modern JavaScript.*
