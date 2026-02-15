@@ -1,4 +1,4 @@
-# 🌤️ Real-Time Weather Dashboard
+# Real-Time Weather Dashboard
 
 > **A dynamic, mobile-first weather application consuming the OpenWeatherMap API to provide instant meteorological data and adaptive UI feedback.**
 
